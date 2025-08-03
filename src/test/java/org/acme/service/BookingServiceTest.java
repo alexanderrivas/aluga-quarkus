@@ -1,14 +1,14 @@
-package org.acme;
+package org.acme.service;
 
-import jakarta.inject.Inject;
 import org.acme.controler.dto.BookingDTO;
 import org.acme.entity.BookingEntity;
 import org.acme.entity.VehicleEntity;
 import org.acme.repository.BookingRepository;
-import org.acme.service.BookingService;
-import org.acme.service.VehicleService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.time.LocalDate;
 
@@ -19,14 +19,19 @@ import static org.mockito.Mockito.when;
 
 class BookingServiceTest {
 
-    @Inject
+    @Mock
     VehicleService vehicleService;
 
-    @Inject
+    @InjectMocks
     BookingService bookingService;
 
-    @Inject
+    @Mock
     BookingRepository bookingRepository;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+    }
 
     @Test
     void createBookingWithValidData() {

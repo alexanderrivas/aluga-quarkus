@@ -1,4 +1,13 @@
+
 # aluga-quarkus
+
+## ADA Project for Quarkus Beginners
+
+This project implements a simple REST API for managing a car rental service using Quarkus. It includes basic CRUD operations for cars and rentals, demonstrating the use of Quarkus features such as RESTEasy, Hibernate ORM with Panache, and H2 database.
+
+Developed by Alexander Rivas.
+
+## Getting Started
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
